@@ -105,6 +105,19 @@
             "varience": 2
         },
         {
+            "minHeight": 5,
+            "maxPerChunk": 5,
+            "maxHeight": 15,
+            "minPerChunk": 1,
+            "minSize": 8,
+            "maxSize": 4,
+            "palette": [
+                {"block": "minecraft:nether_quartz_ore"}
+            ],
+            "varience": 4
+        },
+
+        {
             "minHeight": 19,
             "maxPerChunk": 8,
             "maxHeight": 210,
