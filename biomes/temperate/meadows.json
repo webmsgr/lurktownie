@@ -1,14 +1,9 @@
 {
     "name": "Meadows",
-    "derivative": "FOREST",
-    "vanillaDerivative": "FOREST",
     "color": "#5CC62E",
     "rarity": 4,
-    "generators": [{
-        "min": 5,
-        "max": 12,
-        "generator": "highplains"
-    }],
+    "derivative": "FOREST",
+    "vanillaDerivative": "FOREST",
     "customDerivitives": [{
         "category": "plains",
         "humidity": 0.8,
@@ -17,16 +12,16 @@
         "downfallType": "rain",
         "grassColor": "#83BB6D"
     }],
-    "jigsawStructures": [
-        {
-            "rarity": 2200,
-            "structure": "pillager_outpost"
-        },
-        {
-            "rarity": 1900,
-            "structure": "village-temperate"
-        }
-    ],
+    "generators": [{
+        "min": 5,
+        "max": 12,
+        "generator": "highplains"
+    }],
+    "biomeStyle": {"style": "SIMPLEX"},
+    "wall": {"palette": [
+        {"block": "minecraft:stone"},
+        {"block": "minecraft:andesite"}
+    ]},
     "layers": [
         {"palette": [{"block": "minecraft:grass_block"}]},
         {
@@ -52,55 +47,19 @@
             ]
         }
     ],
-    "decorators": [
+    "jigsawStructures": [
         {
-            "chance": 0.04,
-            "variance": {
-                "style": "TRIOCTAVE_SIMPLEX",
-                "zoom": 6,
-                "fracture": {
-                    "style": "STATIC",
-                    "zoom": 0.2,
-                    "multiplier": 10
-                }
-            },
-            "style": {"style": "STATIC"},
-            "palette": [
-                {"block": "minecraft:cornflower"},
-                {"block": "minecraft:allium"},
-                {"block": "minecraft:cornflower"}
-            ]
+            "rarity": 2200,
+            "structure": "pillager_outpost"
         },
         {
-            "chance": 0.02,
-            "variance": {
-                "style": "TRIOCTAVE_SIMPLEX",
-                "zoom": 6,
-                "fracture": {
-                    "style": "STATIC",
-                    "zoom": 0.2,
-                    "multiplier": 10
-                }
-            },
-            "style": {"style": "STATIC"},
-            "palette": [
-                {"block": "minecraft:poppy"},
-                {"block": "minecraft:pink_tulip"},
-                {"block": "minecraft:lily_of_the_valley"}
-            ]
-        },
-        {
-            "chance": 0.005,
-            "palette": [{"block": "minecraft:tall_grass"}]
-        },
-        {
-            "chance": 0.1,
-            "palette": [{"block": "minecraft:grass"}]
+            "rarity": 1900,
+            "structure": "village-temperate"
         }
     ],
     "objects": [
         {
-            "mode": "FAST_MIN_HEIGHT",
+            "mode": "PAINT",
             "chance": 0.009,
             "rotation": {
                 "yAxis": {
@@ -158,7 +117,7 @@
         },
         {
             "chance": 1.0E-4,
-            "mode": "FAST_MIN_HEIGHT",
+            "mode": "PAINT",
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -203,9 +162,50 @@
             ]
         }
     ],
-    "biomeStyle": {"style": "SIMPLEX"},
-    "wall": {"palette": [
-        {"block": "minecraft:stone"},
-        {"block": "minecraft:andesite"}
-    ]}
+    "decorators": [
+        {
+            "chance": 0.04,
+            "variance": {
+                "style": "TRIOCTAVE_SIMPLEX",
+                "zoom": 6,
+                "fracture": {
+                    "style": "STATIC",
+                    "zoom": 0.2,
+                    "multiplier": 10
+                }
+            },
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "minecraft:cornflower"},
+                {"block": "minecraft:allium"},
+                {"block": "minecraft:cornflower"}
+            ]
+        },
+        {
+            "chance": 0.02,
+            "variance": {
+                "style": "TRIOCTAVE_SIMPLEX",
+                "zoom": 6,
+                "fracture": {
+                    "style": "STATIC",
+                    "zoom": 0.2,
+                    "multiplier": 10
+                }
+            },
+            "style": {"style": "STATIC"},
+            "palette": [
+                {"block": "minecraft:poppy"},
+                {"block": "minecraft:pink_tulip"},
+                {"block": "minecraft:lily_of_the_valley"}
+            ]
+        },
+        {
+            "chance": 0.005,
+            "palette": [{"block": "minecraft:tall_grass"}]
+        },
+        {
+            "chance": 0.1,
+            "palette": [{"block": "minecraft:grass"}]
+        }
+    ]
 }

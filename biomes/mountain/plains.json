@@ -1,24 +1,21 @@
 {
     "name": "Mountain Plains",
-    "rarity": 1,
     "color": "#4E5A61",
+    "rarity": 1,
     "derivative": "OLD_GROWTH_SPRUCE_TAIGA",
     "vanillaDerivative": "OLD_GROWTH_SPRUCE_TAIGA",
-    "jigsawStructures": [
-        {
-            "rarity": 1700,
-            "structure": "pillager_outpost"
-        },
-        {
-            "rarity": 1000,
-            "structure": "village-tundra"
-        }
-    ],
+    "children": ["mountain/plain-extended"],
     "generators": [{
         "generator": "mountain",
-        "max": 23,
-        "min": 15
+        "max": 53,
+        "min": 45
     }],
+    "wall": {"palette": [
+        {"block": "minecraft:stone"},
+        {"block": "minecraft:andesite"},
+        {"block": "minecraft:gravel"},
+        {"block": "minecraft:cyan_terracotta"}
+    ]},
     "layers": [
         {
             "minHeight": 1,
@@ -67,16 +64,84 @@
             "palette": [{"block": "minecraft:dirt"}]
         }
     ],
-    "childStyle": {
-        "style": "IRIS_DOUBLE",
-        "zoom": 10
-    },
-    "wall": {"palette": [
-        {"block": "minecraft:stone"},
-        {"block": "minecraft:andesite"},
-        {"block": "minecraft:gravel"},
-        {"block": "minecraft:cyan_terracotta"}
-    ]},
+    "jigsawStructures": [
+        {
+            "rarity": 1700,
+            "structure": "pillager_outpost"
+        },
+        {
+            "rarity": 1000,
+            "structure": "village-tundra"
+        }
+    ],
+    "objects": [
+        {
+            "mode": "PAINT",
+            "chance": 0.1,
+            "place": [
+                "clutter/sbush1",
+                "clutter/sbush2",
+                "clutter/sbush3"
+            ]
+        },
+        {
+            "mode": "PAINT",
+            "chance": 0.1,
+            "place": [
+                "clutter/sbush1",
+                "clutter/sbush2",
+                "clutter/sbush3"
+            ]
+        },
+        {
+            "chance": 3.0E-4,
+            "mode": "PAINT",
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
+                "enabled": true
+            },
+            "place": ["structures/ruin1"]
+        },
+        {
+            "mode": "PAINT",
+            "chance": 0.1,
+            "place": [
+                "clutter/sbush1",
+                "clutter/sbush2",
+                "clutter/sbush3"
+            ]
+        },
+        {
+            "mode": "PAINT",
+            "place": [
+                "structures/mlandstone1",
+                "structures/mlandstone2",
+                "structures/mlandstone3",
+                "structures/mlandstone4",
+                "structures/mlandstone5"
+            ],
+            "chance": 0.04,
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": -360,
+                    "max": 360
+                }
+            },
+            "translate": {
+                "x": 0,
+                "y": -1,
+                "z": 0
+            }
+        }
+    ],
     "decorators": [
         {
             "chance": 0.2,
@@ -145,72 +210,8 @@
             }]
         }
     ],
-    "objects": [
-        {
-            "mode": "PAINT",
-            "chance": 0.1,
-            "place": [
-                "clutter/sbush1",
-                "clutter/sbush2",
-                "clutter/sbush3"
-            ]
-        },
-        {
-            "mode": "PAINT",
-            "chance": 0.1,
-            "place": [
-                "clutter/sbush1",
-                "clutter/sbush2",
-                "clutter/sbush3"
-            ]
-        },
-        {
-            "chance": 3.0E-4,
-            "mode": "FAST_MIN_HEIGHT",
-            "rotation": {
-                "yAxis": {
-                    "min": 0,
-                    "max": 0,
-                    "interval": 90,
-                    "enabled": true
-                },
-                "enabled": true
-            },
-            "place": ["structures/ruin1"]
-        },
-        {
-            "mode": "PAINT",
-            "chance": 0.1,
-            "place": [
-                "clutter/sbush1",
-                "clutter/sbush2",
-                "clutter/sbush3"
-            ]
-        },
-        {
-            "mode": "PAINT",
-            "place": [
-                "structures/mlandstone1",
-                "structures/mlandstone2",
-                "structures/mlandstone3",
-                "structures/mlandstone4",
-                "structures/mlandstone5"
-            ],
-            "chance": 0.04,
-            "rotation": {
-                "enabled": true,
-                "yAxis": {
-                    "enabled": true,
-                    "interval": 90,
-                    "min": -360,
-                    "max": 360
-                }
-            },
-            "translate": {
-                "x": 0,
-                "y": -1,
-                "z": 0
-            }
-        }
-    ]
+    "childStyle": {
+        "style": "IRIS_DOUBLE",
+        "zoom": 10
+    }
 }

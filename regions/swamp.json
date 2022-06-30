@@ -1,104 +1,61 @@
 {
     "name": "Swamp",
     "color": "#69943C",
+    "rarity": 2,
     "landBiomes": [
         "swamp/roofed-forest",
         "swamp/willow-forest",
         "swamp/sea/lake",
         "swamp/roofed-wayward",
+        "swamp/swamp-forest",
         "swamp/cambian-drift",
-        "swamp/marsh"
+        "swamp/marsh",
+        "swamp/handy-willow-forest"
     ],
-    "shoreBiomes": ["swamp/shore/beach"],
     "jigsawStructures": [{
         "structure": "murky_stronghold",
         "rarity": 250
     }],
-    "seaBiomes": [
-        "swamp/sea/ocean",
-        "swamp/sea/ocean-tree"
-    ],
-    "riverStyle": {
-        "style": "VASCULAR",
-        "zoom": 4.77,
-        "fracture": {
-            "multiplier": 240,
-            "style": "NOWHERE",
-            "zoom": 5
-        }
-    },
-    "entitySpawners": [
-        "swamp/land-passive",
-        "swamp/land-hostile",
-        "swamp/land-cave"
-    ],
-    "deposits": [
-        {
-            "minHeight": 35,
-            "maxPerChunk": 3,
-            "maxHeight": 79,
-            "minPerChunk": 1,
-            "minSize": 3,
-            "maxSize": 8,
-            "palette": [{"block": "minecraft:coal_ore"}],
-            "varience": 4
+    "objects": [{
+        "heightmap": {
+            "seed": 1337,
+            "style": {
+                "style": "SIMPLEX",
+                "multiplier": 10
+            },
+            "offsetY": 5
         },
-        {
-            "minHeight": 35,
-            "maxPerChunk": 5,
-            "maxHeight": 79,
-            "minPerChunk": 4,
-            "minSize": 3,
-            "maxSize": 8,
-            "palette": [{"block": "minecraft:iron_ore"}],
-            "varience": 4
+        "chance": 0.05,
+        "bottom": true,
+        "density": 1,
+        "place": [
+            "structures/amethyst1",
+            "structures/amethyst2",
+            "structures/amethyst3",
+            "structures/amethyst4",
+            "structures/amethyst5",
+            "structures/amethyst6"
+        ],
+        "edit": [{
+            "find": [{"block": "minecraft:glass"}],
+            "replace": {"palette": [{"block": "minecraft:void_air"}]}
+        }],
+        "enabled": true,
+        "xAxis": {
+            "interval": 90,
+            "max": 360,
+            "min": 0
+        },
+        "yAxis": {
+            "interval": 90,
+            "max": 360,
+            "min": 0
+        },
+        "translate": {
+            "yRandom": 10,
+            "y": 2
         }
-    ],
-    "objects": [
-        {
-            "heightmap": {
-                "seed": 1337,
-                "style": {
-                    "style": "SIMPLEX",
-                    "multiplier": 10
-                },
-                "offsetY": 5
-            },
-            "chance": 0.05,
-            "bottom": true,
-            "density": 1,
-            "place": [
-                "structures/amethyst1",
-                "structures/amethyst2",
-                "structures/amethyst3",
-                "structures/amethyst4",
-                "structures/amethyst5",
-                "structures/amethyst6"
-            ],
-            "edit": [{
-                "find": [{"block": "minecraft:glass"}],
-                "replace": {"palette": [{"block": "minecraft:void_air"}]}
-            }],
-            "enabled": true,
-            "xAxis": {
-                "interval": 90,
-                "max": 360,
-                "min": 0
-            },
-            "yAxis": {
-                "interval": 90,
-                "max": 360,
-                "min": 0
-            },
-            "translate": {
-                "yRandom": 10,
-                "y": 2
-            }
-        }
-    ],
-    "landBiomeZoom": 3,
-    "shoreHeightMin": 1.2,
-    "shoreHeightMax": 3,
+    }],
     "loot": {
         "mode": "ADD",
         "multiplier": 1,
@@ -110,13 +67,49 @@
             "swamp-food"
         ]
     },
+    "shoreBiomes": ["swamp/shore/beach"],
+    "seaBiomes": [
+        "swamp/sea/ocean",
+        "swamp/swamp-mangrove-lake",
+        "swamp/sea/ocean-tree"
+    ],
+    "entitySpawners": [
+        "swamp/land-passive",
+        "swamp/land-hostile",
+        "swamp/land-cave"
+    ],
+    "deposits": [
+        {
+            "minHeight": 35,
+            "maxPerChunk": 6,
+            "maxHeight": 109,
+            "minPerChunk": 1,
+            "minSize": 3,
+            "maxSize": 8,
+            "palette": [{"block": "minecraft:coal_ore"}],
+            "varience": 4
+        },
+        {
+            "minHeight": 35,
+            "maxPerChunk": 10,
+            "maxHeight": 109,
+            "minPerChunk": 4,
+            "minSize": 3,
+            "maxSize": 8,
+            "palette": [{"block": "minecraft:iron_ore"}],
+            "varience": 4
+        }
+    ],
+    "landBiomeZoom": 3,
+    "shoreHeightMin": 1.2,
+    "shoreHeightMax": 3,
     "carving": {"caves": [{
         "breakSurface": true,
         "cave": "swamp/main",
         "rarity": 10,
         "caveStartHeight": {
-            "max": 120,
-            "min": 20,
+            "max": 400,
+            "min": 15,
             "style": {"style": "STATIC"}
         }
     }]},
@@ -132,6 +125,5 @@
             {"block": "minecraft:grass"},
             {"block": "minecraft:tall_grass"}
         ]
-    }],
-    "rarity": 2
+    }]
 }

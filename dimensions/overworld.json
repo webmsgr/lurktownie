@@ -1,12 +1,17 @@
 {
-    "version": 2024,
+    "version": 2085,
     "name": "Overworld",
     "environment": "NORMAL",
-    "fluidHeight": 75,
+    "fluidHeight": 160,
     "continentZoom": 1,
     "continentalStyle": {
         "style": "NOWHERE_CELLULAR",
         "zoom": 5
+    },
+    "logicalHeight": 512,
+    "dimensionHeight": {
+        "max": 512,
+        "min": 0
     },
     "landChance": 0.69,
     "regionStyle": {
@@ -24,14 +29,15 @@
         }
     },
     "regionZoom": 6.15,
+    "aggressiveBiomeReshuffle": true,
     "regions": [
+        "frozen",
+        "hot",
         "mushroom",
         "swamp",
-        "frozen",
-        "tundra",
         "temperate",
         "tropical",
-        "hot"
+        "tundra"
     ],
     "carving": {"caves": [
         {
@@ -65,25 +71,6 @@
             }
         }
     ]},
-    "islandBiomeChanceStyle": {
-        "style": "NOWHERE_CELLULAR",
-        "axialFracturing": true,
-        "fracture": {
-            "multiplier": 55,
-            "axialFracturing": true,
-            "style": "NOWHERE",
-            "zoom": 0.15,
-            "fracture": {
-                "axialFracturing": true,
-                "style": "STATIC",
-                "multiplier": 4
-            }
-        }
-    },
-    "treeSettings": {
-        "enabled": true,
-        "mode": "FIRST"
-    },
     "seaBiomeStyle": {"style": "SIMPLEX"},
     "landBiomeStyle": {
         "style": "NOWHERE_CELLULAR",
@@ -101,7 +88,6 @@
         }
     },
     "shoreBiomeStyle": {"style": "NOWHERE_CELLULAR"},
-    "lootTries": 32,
     "loot": {"tables": [
         "global-treasure",
         "global-tools",
@@ -110,8 +96,8 @@
     "deposits": [
         {
             "minHeight": 19,
-            "maxPerChunk": 4,
-            "maxHeight": 150,
+            "maxPerChunk": 8,
+            "maxHeight": 190,
             "minPerChunk": 1,
             "minSize": 25,
             "maxSize": 25,
@@ -120,8 +106,8 @@
         },
         {
             "minHeight": 19,
-            "maxPerChunk": 4,
-            "maxHeight": 150,
+            "maxPerChunk": 8,
+            "maxHeight": 210,
             "minPerChunk": 1,
             "minSize": 25,
             "maxSize": 25,
@@ -130,8 +116,8 @@
         },
         {
             "minHeight": 19,
-            "maxPerChunk": 4,
-            "maxHeight": 150,
+            "maxPerChunk": 8,
+            "maxHeight": 209,
             "minPerChunk": 1,
             "minSize": 25,
             "maxSize": 25,
@@ -140,8 +126,8 @@
         },
         {
             "minHeight": 19,
-            "maxPerChunk": 4,
-            "maxHeight": 150,
+            "maxPerChunk": 8,
+            "maxHeight": 189,
             "minPerChunk": 1,
             "minSize": 25,
             "maxSize": 25,
@@ -151,7 +137,7 @@
         {
             "minHeight": 5,
             "maxPerChunk": 128,
-            "maxHeight": 13,
+            "maxHeight": 33,
             "minPerChunk": 128,
             "minSize": 8,
             "maxSize": 4,
@@ -160,8 +146,8 @@
         },
         {
             "minHeight": 5,
-            "maxPerChunk": 5,
-            "maxHeight": 15,
+            "maxPerChunk": 9,
+            "maxHeight": 51,
             "minPerChunk": 5,
             "minSize": 8,
             "maxSize": 4,
@@ -179,8 +165,8 @@
         },
         {
             "minHeight": 2,
-            "maxPerChunk": 3,
-            "maxHeight": 22,
+            "maxPerChunk": 8,
+            "maxHeight": 42,
             "minPerChunk": 1,
             "minSize": 3,
             "maxSize": 6,
@@ -189,8 +175,8 @@
         },
         {
             "minHeight": 4,
-            "maxPerChunk": 11,
-            "maxHeight": 40,
+            "maxPerChunk": 15,
+            "maxHeight": 80,
             "minPerChunk": 5,
             "minSize": 6,
             "maxSize": 10,
@@ -202,8 +188,8 @@
         },
         {
             "minHeight": 1,
-            "maxPerChunk": 7,
-            "maxHeight": 67,
+            "maxPerChunk": 14,
+            "maxHeight": 77,
             "minPerChunk": 3,
             "minSize": 3,
             "maxSize": 5,
@@ -212,8 +198,8 @@
         },
         {
             "minHeight": 1,
-            "maxPerChunk": 8,
-            "maxHeight": 29,
+            "maxPerChunk": 15,
+            "maxHeight": 49,
             "minPerChunk": 4,
             "minSize": 3,
             "maxSize": 8,
@@ -222,8 +208,8 @@
         },
         {
             "minHeight": 1,
-            "maxPerChunk": 18,
-            "maxHeight": 120,
+            "maxPerChunk": 35,
+            "maxHeight": 320,
             "minPerChunk": 16,
             "minSize": 4,
             "maxSize": 8,
@@ -232,8 +218,8 @@
         },
         {
             "minHeight": 1,
-            "maxPerChunk": 18,
-            "maxHeight": 64,
+            "maxPerChunk": 20,
+            "maxHeight": 85,
             "minPerChunk": 9,
             "minSize": 4,
             "maxSize": 9,
@@ -242,8 +228,8 @@
         },
         {
             "minHeight": 1,
-            "maxPerChunk": 18,
-            "maxHeight": 175,
+            "maxPerChunk": 39,
+            "maxHeight": 375,
             "minPerChunk": 20,
             "minSize": 6,
             "maxSize": 10,
@@ -254,13 +240,10 @@
     "caveBiomeStyle": {"style": "SIMPLEX"},
     "coordFractureZoom": 0.15,
     "preventLeafDecay": true,
-    "noiseModificationFromFeatures": false,
-    "postProcessCaves": true,
     "useMantle": true,
-    "terrainZoom": 1,
     "stronghold": "stronghold",
     "strongholdJumpDistance": 670,
     "maxStrongholds": 27,
     "decorate": true,
     "skylandBiomeStyle": {"style": "SIMPLEX"}
-    }
+}

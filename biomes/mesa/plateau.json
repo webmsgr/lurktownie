@@ -1,8 +1,8 @@
 {
     "name": "Mesa Plateau",
-    "derivative": "BADLANDS",
-    "rarity": 1,
     "color": "#AC4416",
+    "rarity": 1,
+    "derivative": "BADLANDS",
     "vanillaDerivative": "BADLANDS",
     "biomeScatter": [
         "BADLANDS",
@@ -11,10 +11,11 @@
     ],
     "children": ["mesa/plateau-dirt"],
     "generators": [{
-        "min": 34,
-        "max": 40,
+        "min": 70,
+        "max": 98,
         "generator": "cracked-cliffs"
     }],
+    "biomeStyle": {"style": "SIMPLEX"},
     "layers": [
         {
             "minHeight": 5,
@@ -133,12 +134,6 @@
             "palette": [{"block": "minecraft:terracotta"}]
         }
     ],
-    "lockLayers": true,
-    "decorators": [{
-        "chance": 0.05,
-        "palette": [{"block": "minecraft:tall_grass"}]
-    }],
-    "biomeStyle": {"style": "SIMPLEX"},
     "objects": [{
         "place": [
             "structures/tower",
@@ -156,5 +151,10 @@
                 "max": 360
             }
         }
-    }]
+    }],
+    "decorators": [{
+        "chance": 0.05,
+        "palette": [{"block": "minecraft:tall_grass"}]
+    }],
+    "lockLayers": true
 }

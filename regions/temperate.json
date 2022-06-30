@@ -1,6 +1,7 @@
 {
     "name": "Temperate",
     "color": "#9BEE61",
+    "rarity": 1,
     "landBiomes": [
         "temperate/plateau",
         "temperate/stranged-plains",
@@ -8,44 +9,16 @@
         "temperate/osaka-violet-forest",
         "temperate/combo-forest",
         "temperate/plains",
+        "temperate/wilds",
         "temperate/oak-forest",
         "temperate/osaka-red-forest",
         "temperate/birch-forest",
         "temperate/reaching-forest",
         "temperate/lush-plains"
     ],
-    "shoreBiomes": [
-        "temperate/shore/beach",
-        "temperate/shore/oak-beach"
-    ],
-    "seaBiomes": [
-        "temperate/sea/river",
-        "ocean/deep"
-    ],
-    "riverBiomes": ["temperate/sea/river"],
     "jigsawStructures": [{
         "structure": "murky_stronghold",
         "rarity": 250
-    }],
-    "ENTITY_SPAWNS": "ALL ENTITY SPAWNS FOR THE REGION",
-    "entitySpawners": [
-        "temperate/land-passive",
-        "temperate/land-hostile",
-        "temperate/land-cave"
-    ],
-    "shoreBiomeZoom": 0.15,
-    "deposits": [{
-        "minHeight": 15,
-        "maxPerChunk": 13,
-        "maxHeight": 200,
-        "minPerChunk": 4,
-        "minSize": 3,
-        "maxSize": 8,
-        "palette": [
-            {"block": "minecraft:iron_ore"},
-            {"block": "minecraft:coal_ore"}
-        ],
-        "varience": 4
     }],
     "objects": [
         {
@@ -92,21 +65,15 @@
             "name": "standard-surface-portals",
             "chance": 0.001,
             "place": [
-                "clutter/swordnp2",
-                "clutter/swordnp1",
+                "structures/swordnp2",
+                "structures/swordnp1",
+                "structures/swordnpstr2",
+                "structures/swordnpstr1",
                 "structures/giantportal1",
                 "structures/giantportal2",
                 "structures/giantportal3",
-                "structures/portal1",
-                "structures/portal2",
-                "structures/portal3",
-                "structures/portal4",
-                "structures/portal5",
-                "structures/portal6",
-                "structures/portal7",
-                "structures/portal8",
-                "structures/portal9",
-                "structures/portal10"
+                "structures/megaportal1",
+                "structures/megaportal2"
             ],
             "edit": [
                 {
@@ -130,10 +97,49 @@
                     "chance": 0.2
                 }
             ],
-            "mode": "FAST_MIN_HEIGHT",
+            "mode": "PAINT",
             "carvingSupport": "SURFACE_ONLY"
         }
     ],
+    "loot": {
+        "mode": "ADD",
+        "multiplier": 1,
+        "tables": [
+            "global-tools",
+            "global-treasure",
+            "temperate-clutter",
+            "temperate-food"
+        ]
+    },
+    "shoreBiomes": [
+        "temperate/shore/beach",
+        "temperate/shore/oak-beach"
+    ],
+    "seaBiomes": [
+        "temperate/sea/river",
+        "ocean/deep"
+    ],
+    "riverBiomes": ["temperate/sea/river"],
+    "ENTITY_SPAWNS": "ALL ENTITY SPAWNS FOR THE REGION",
+    "entitySpawners": [
+        "temperate/land-passive",
+        "temperate/land-hostile",
+        "temperate/land-cave"
+    ],
+    "shoreBiomeZoom": 0.15,
+    "deposits": [{
+        "minHeight": 15,
+        "maxPerChunk": 26,
+        "maxHeight": 410,
+        "minPerChunk": 4,
+        "minSize": 3,
+        "maxSize": 8,
+        "palette": [
+            {"block": "minecraft:iron_ore"},
+            {"block": "minecraft:coal_ore"}
+        ],
+        "varience": 4
+    }],
     "carving": {
         "ravines": [
             {
@@ -151,8 +157,8 @@
                 "cave": "drip/main",
                 "rarity": 30,
                 "caveStartHeight": {
-                    "max": 180,
-                    "min": 20,
+                    "max": 400,
+                    "min": 15,
                     "style": {"style": "STATIC"}
                 }
             },
@@ -161,8 +167,8 @@
                 "cave": "rocky/main",
                 "rarity": 15,
                 "caveStartHeight": {
-                    "max": 185,
-                    "min": 25,
+                    "max": 400,
+                    "min": 15,
                     "style": {"style": "STATIC"}
                 }
             }
@@ -170,24 +176,8 @@
     },
     "riverRarity": 1,
     "landBiomeZoom": 5.5,
-    "riverStyle": {
-        "style": "GLOB_IRIS_DOUBLE",
-        "zoom": 4.925,
-        "exponent": 3.1
-    },
     "shoreHeightMin": 1,
     "shoreHeightMax": 5.2,
-    "loot": {
-        "mode": "ADD",
-        "multiplier": 1,
-        "tables": [
-            "global-tools",
-            "global-treasure",
-            "temperate-clutter",
-            "temperate-food"
-        ]
-    },
     "shoreHeightZoom": 1.14,
-    "riverThickness": 0.025,
-    "rarity": 1
+    "riverThickness": 0.025
 }

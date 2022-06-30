@@ -1,14 +1,15 @@
 {
     "name": "Hot Mountain Plains",
-    "derivative": "DESERT",
-    "rarity": 1,
     "color": "#C9A429",
+    "rarity": 1,
+    "derivative": "DESERT",
     "vanillaDerivative": "DESERT",
     "generators": [{
         "generator": "smooth-dunes",
-        "max": 8,
-        "min": 11
+        "max": 59,
+        "min": 66
     }],
+    "wall": {"palette": [{"block": "minecraft:gray_terracotta"}]},
     "layers": [
         {
             "minHeight": 4,
@@ -43,6 +44,5 @@
         "palette": [{"block": "minecraft:cactus"}],
         "heightVariance": {"style": "STATIC"},
         "stackMin": 1
-    }],
-    "wall": {"palette": [{"block": "minecraft:gray_terracotta"}]}
+    }]
 }

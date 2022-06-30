@@ -1,12 +1,12 @@
 {
     "name": "Ocean",
+    "color": "#5244D5",
     "derivative": "OCEAN",
     "vanillaDerivative": "OCEAN",
-    "color": "#5244D5",
     "generators": [{
         "generator": "mountain",
         "max": -35,
-        "min": -50
+        "min": -60
     }],
     "layers": [
         {
@@ -37,44 +37,6 @@
             "palette": [{"block": "minecraft:gravel"}]
         }
     ],
-    "childStyle": {
-        "style": "SIMPLEX",
-        "zoom": 2,
-        "fracture": {
-            "style": "SIMPLEX",
-            "zoom": 0.8,
-            "multiplier": 50,
-            "fracture": {
-                "style": "CELLULAR",
-                "zoom": 0.3,
-                "multiplier": 25
-            }
-        }
-    },
-    "childShrinkFactor": 1,
-    "decorators": [
-        {
-            "chance": 0.02,
-            "palette": [{"block": "minecraft:kelp_plant"}],
-            "stackMin": 2,
-            "stackMax": 6
-        },
-        {
-            "chance": 0.05,
-            "palette": [{"block": "minecraft:seagrass"}]
-        },
-        {
-            "chance": 0.05,
-            "palette": [{
-                "block": "minecraft:tall_seagrass",
-                "data": {"half": "lower"}
-            }],
-            "topPalette": [{
-                "block": "minecraft:tall_seagrass",
-                "data": {"half": "upper"}
-            }]
-        }
-    ],
     "objects": [
         {
             "place": [
@@ -85,7 +47,7 @@
                 "structures/landstone5"
             ],
             "chance": 1,
-            "mode": "FAST_MIN_HEIGHT",
+            "mode": "PAINT",
             "underwater": true,
             "waterloggable": true,
             "rotation": {
@@ -148,9 +110,47 @@
                 "structures/oruins3"
             ],
             "chance": 0.008,
-            "mode": "FAST_MIN_HEIGHT",
+            "mode": "PAINT",
             "underwater": true,
             "waterloggable": true
         }
-    ]
+    ],
+    "decorators": [
+        {
+            "chance": 0.02,
+            "palette": [{"block": "minecraft:kelp_plant"}],
+            "stackMin": 2,
+            "stackMax": 6
+        },
+        {
+            "chance": 0.05,
+            "palette": [{"block": "minecraft:seagrass"}]
+        },
+        {
+            "chance": 0.05,
+            "palette": [{
+                "block": "minecraft:tall_seagrass",
+                "data": {"half": "lower"}
+            }],
+            "topPalette": [{
+                "block": "minecraft:tall_seagrass",
+                "data": {"half": "upper"}
+            }]
+        }
+    ],
+    "childStyle": {
+        "style": "SIMPLEX",
+        "zoom": 2,
+        "fracture": {
+            "style": "SIMPLEX",
+            "zoom": 0.8,
+            "multiplier": 50,
+            "fracture": {
+                "style": "CELLULAR",
+                "zoom": 0.3,
+                "multiplier": 25
+            }
+        }
+    },
+    "childShrinkFactor": 1
 }

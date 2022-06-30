@@ -1,9 +1,9 @@
 {
     "name": "Birch Thin Forest",
-    "derivative": "BIRCH_FOREST",
-    "vanillaDerivative": "BIRCH_FOREST",
     "color": "#9FF07D",
     "rarity": 2,
+    "derivative": "BIRCH_FOREST",
+    "vanillaDerivative": "BIRCH_FOREST",
     "generators": [
         {
             "min": 5,
@@ -16,16 +16,16 @@
             "generator": "rare-hills"
         }
     ],
-    "jigsawStructures": [
-        {
-            "rarity": 900,
-            "structure": "pillager_outpost"
-        },
-        {
-            "rarity": 1100,
-            "structure": "village-temperate"
-        }
-    ],
+    "biomeZoom": 50,
+    "biomeStyle": {"style": "SIMPLEX"},
+    "wall": {
+        "style": {"style": "STATIC"},
+        "palette": [
+            {"block": "minecraft:stone"},
+            {"block": "minecraft:andesite"},
+            {"block": "minecraft:stone"}
+        ]
+    },
     "layers": [
         {
             "style": {"style": "STATIC"},
@@ -55,6 +55,16 @@
                 {"block": "minecraft:andesite"},
                 {"block": "minecraft:stone"}
             ]
+        }
+    ],
+    "jigsawStructures": [
+        {
+            "rarity": 900,
+            "structure": "pillager_outpost"
+        },
+        {
+            "rarity": 1100,
+            "structure": "village-temperate"
         }
     ],
     "objects": [
@@ -161,8 +171,6 @@
             "translate": {"y": 1}
         }
     ],
-    "biomeZoom": 50,
-    "biomeStyle": {"style": "SIMPLEX"},
     "decorators": [
         {
             "chance": 0.03,
@@ -199,13 +207,5 @@
             "palette": [{"block": "minecraft:tall_grass"}],
             "style": {"style": "STATIC"}
         }
-    ],
-    "wall": {
-        "style": {"style": "STATIC"},
-        "palette": [
-            {"block": "minecraft:stone"},
-            {"block": "minecraft:andesite"},
-            {"block": "minecraft:stone"}
-        ]
-    }
+    ]
 }
