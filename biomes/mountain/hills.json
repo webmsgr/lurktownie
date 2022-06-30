@@ -1,25 +1,21 @@
 {
     "name": "Mountain Hills",
-    "derivative": "OLD_GROWTH_SPRUCE_TAIGA",
-    "rarity": 1,
     "color": "#ABB9C0",
+    "rarity": 1,
+    "derivative": "OLD_GROWTH_SPRUCE_TAIGA",
     "vanillaDerivative": "OLD_GROWTH_SPRUCE_TAIGA",
     "children": ["mountain/forest"],
     "generators": [{
         "generator": "smooth-dunes",
-        "max": 23,
-        "min": 5
+        "max": 33,
+        "min": 15
     }],
-    "jigsawStructures": [
-        {
-            "rarity": 1700,
-            "structure": "pillager_outpost"
-        },
-        {
-            "rarity": 1000,
-            "structure": "village-tundra"
-        }
-    ],
+    "wall": {"palette": [
+        {"block": "minecraft:stone"},
+        {"block": "minecraft:andesite"},
+        {"block": "minecraft:gravel"},
+        {"block": "minecraft:cyan_terracotta"}
+    ]},
     "layers": [
         {
             "minHeight": 1,
@@ -68,58 +64,14 @@
             "palette": [{"block": "minecraft:dirt"}]
         }
     ],
-    "childStyle": {
-        "style": "IRIS_DOUBLE",
-        "zoom": 10
-    },
-    "wall": {"palette": [
-        {"block": "minecraft:stone"},
-        {"block": "minecraft:andesite"},
-        {"block": "minecraft:gravel"},
-        {"block": "minecraft:cyan_terracotta"}
-    ]},
-    "decorators": [
+    "jigsawStructures": [
         {
-            "chance": 0.2,
-            "variance": {
-                "style": "CELLULAR",
-                "zoom": 0.25,
-                "fracture": {
-                    "style": "SIMPLEX",
-                    "zoom": 0.2,
-                    "multiplier": 10
-                }
-            },
-            "style": {
-                "style": "SIMPLEX",
-                "zoom": 0.2,
-                "fracture": {
-                    "style": "STATIC",
-                    "multiplier": 8
-                }
-            },
-            "palette": [
-                {"block": "minecraft:dandelion"},
-                {"block": "minecraft:poppy"},
-                {"block": "minecraft:blue_orchid"},
-                {"block": "minecraft:allium"},
-                {"block": "minecraft:azure_bluet"},
-                {"block": "minecraft:red_tulip"},
-                {"block": "minecraft:orange_tulip"},
-                {"block": "minecraft:white_tulip"},
-                {"block": "minecraft:pink_tulip"},
-                {"block": "minecraft:oxeye_daisy"},
-                {"block": "minecraft:cornflower"},
-                {"block": "minecraft:lily_of_the_valley"}
-            ]
+            "rarity": 1700,
+            "structure": "pillager_outpost"
         },
         {
-            "chance": 0.01,
-            "palette": [{"block": "minecraft:tall_grass"}]
-        },
-        {
-            "chance": 0.5,
-            "palette": [{"block": "minecraft:grass"}]
+            "rarity": 1000,
+            "structure": "village-tundra"
         }
     ],
     "objects": [
@@ -143,7 +95,7 @@
         },
         {
             "chance": 1.0E-4,
-            "mode": "FAST_MIN_HEIGHT",
+            "mode": "PAINT",
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -189,5 +141,53 @@
                 "z": 0
             }
         }
-    ]
+    ],
+    "decorators": [
+        {
+            "chance": 0.2,
+            "variance": {
+                "style": "CELLULAR",
+                "zoom": 0.25,
+                "fracture": {
+                    "style": "SIMPLEX",
+                    "zoom": 0.2,
+                    "multiplier": 10
+                }
+            },
+            "style": {
+                "style": "SIMPLEX",
+                "zoom": 0.2,
+                "fracture": {
+                    "style": "STATIC",
+                    "multiplier": 8
+                }
+            },
+            "palette": [
+                {"block": "minecraft:dandelion"},
+                {"block": "minecraft:poppy"},
+                {"block": "minecraft:blue_orchid"},
+                {"block": "minecraft:allium"},
+                {"block": "minecraft:azure_bluet"},
+                {"block": "minecraft:red_tulip"},
+                {"block": "minecraft:orange_tulip"},
+                {"block": "minecraft:white_tulip"},
+                {"block": "minecraft:pink_tulip"},
+                {"block": "minecraft:oxeye_daisy"},
+                {"block": "minecraft:cornflower"},
+                {"block": "minecraft:lily_of_the_valley"}
+            ]
+        },
+        {
+            "chance": 0.01,
+            "palette": [{"block": "minecraft:tall_grass"}]
+        },
+        {
+            "chance": 0.5,
+            "palette": [{"block": "minecraft:grass"}]
+        }
+    ],
+    "childStyle": {
+        "style": "IRIS_DOUBLE",
+        "zoom": 10
+    }
 }

@@ -1,74 +1,18 @@
 {
     "name": "Ocean Warm Bottom",
-    "derivative": "WARM_OCEAN",
     "color": "#4639C0",
+    "derivative": "WARM_OCEAN",
     "vanillaDerivative": "WARM_OCEAN",
     "generators": [{
         "generator": "plain",
         "max": -30,
-        "min": -40
+        "min": -50
     }],
     "layers": [{
         "minHeight": 2,
         "maxHeight": 10,
         "palette": [{"block": "minecraft:sand"}]
     }],
-    "decorators": [
-        {
-            "chance": 0.05,
-            "style": {"style": "STATIC"},
-            "variance": {"style": "STATIC"},
-            "palette": [
-                {
-                    "block": "minecraft:sea_pickle",
-                    "data": {"pickles": 1}
-                },
-                {
-                    "weight": 2,
-                    "block": "minecraft:sea_pickle",
-                    "data": {"pickles": 2}
-                },
-                {
-                    "weight": 3,
-                    "block": "minecraft:sea_pickle",
-                    "data": {"pickles": 3}
-                },
-                {
-                    "weight": 4,
-                    "block": "minecraft:sea_pickle",
-                    "data": {"pickles": 4}
-                }
-            ]
-        },
-        {
-            "chance": 0.02,
-            "palette": [{"block": "minecraft:kelp_plant"}],
-            "stackMin": 2,
-            "stackMax": 6,
-            "partOf": "SEA_FLOOR"
-        },
-        {
-            "chance": 0.2,
-            "palette": [{"block": "minecraft:seagrass"}]
-        },
-        {
-            "chance": 0.2,
-            "palette": [{
-                "block": "minecraft:tall_seagrass",
-                "data": {"half": "lower"}
-            }],
-            "topPalette": [{
-                "block": "minecraft:tall_seagrass",
-                "data": {"half": "upper"}
-            }],
-            "partOf": "SEA_FLOOR"
-        }
-    ],
-    "loot": {
-        "mode": "ADD",
-        "multiplier": 1,
-        "tables": ["tropical-dungeon"]
-    },
     "objects": [
         {
             "place": [
@@ -148,7 +92,7 @@
                 "structures/landstone5"
             ],
             "chance": 1,
-            "mode": "FAST_MIN_HEIGHT",
+            "mode": "PAINT",
             "underwater": true,
             "waterloggable": true,
             "edit": [
@@ -169,45 +113,26 @@
             ]
         },
         {
-            "place": ["landform/underwater/ellipsoid-1"],
-            "chance": 0.5,
-            "underwater": true,
-            "mode": "CENTER_HEIGHT",
-            "clamp": {
-                "minimumHeight": 30,
-                "maximumHeight": 255
-            },
-            "edit": [{
-                "find": [{"block": "minecraft:clay"}],
-                "replace": {
-                    "style": {
-                        "style": "GLOB",
-                        "zoom": 0.02
-                    },
-                    "palette": [
-                        {
-                            "weight": 2,
-                            "block": "minecraft:sand"
-                        },
-                        {
-                            "weight": 1,
-                            "block": "minecraft:cave_air"
-                        }
-                    ]
-                }
-            }]
-        },
-        {
             "place": [
                 "structures/shipgenericw",
                 "structures/shipgenericc",
                 "structures/shipgenericr",
                 "structures/shipgenericu",
-                "structures/shipgenericc"
+                "structures/shipgenericc",
+                "structures/BShip1",
+                "structures/BShip2",
+                "structures/BShip3",
+                "structures/BShip4",
+                "structures/BShip5",
+                "structures/BShip6",
+                "structures/kship1",
+                "structures/kship2",
+                "structures/kship3",
+                "structures/kship4"
             ],
             "markers": [{
                 "mark": [{"block": "minecraft:spruce_planks"}],
-                "maximumMarkers": 5,
+                "maximumMarkers": 4,
                 "marker": "skelepirate"
             }],
             "chance": 0.005,
@@ -215,30 +140,81 @@
             "translate": {"y": -1},
             "waterloggable": true
         },
-    {
-        "chance": 0.035,
-        "rotation": {
-            "yAxis": {
-                "min": 0,
-                "max": 0,
-                "interval": 90,
+        {
+            "chance": 0.035,
+            "rotation": {
+                "yAxis": {
+                    "min": 0,
+                    "max": 0,
+                    "interval": 90,
+                    "enabled": true
+                },
                 "enabled": true
             },
-            "enabled": true
+            "underwater": true,
+            "place": [
+                "structures/oruins1",
+                "structures/oruins2",
+                "structures/oruins3"
+            ],
+            "mode": "PAINT",
+            "loot": [{"name": "tropical-dungeon"}]
+        }
+    ],
+    "decorators": [
+        {
+            "chance": 0.05,
+            "style": {"style": "STATIC"},
+            "variance": {"style": "STATIC"},
+            "palette": [
+                {
+                    "block": "minecraft:sea_pickle",
+                    "data": {"pickles": 1}
+                },
+                {
+                    "weight": 2,
+                    "block": "minecraft:sea_pickle",
+                    "data": {"pickles": 2}
+                },
+                {
+                    "weight": 3,
+                    "block": "minecraft:sea_pickle",
+                    "data": {"pickles": 3}
+                },
+                {
+                    "weight": 4,
+                    "block": "minecraft:sea_pickle",
+                    "data": {"pickles": 4}
+                }
+            ]
         },
-        "underwater": true,
-        "place": [
-            "structures/oruins1",
-            "structures/oruins2",
-            "structures/oruins3"
-        ],
-        "mode": "PAINT",
-        "loot": [
-            {
-                "name": "tropical-dungeon"
-            }
-        ]
-
+        {
+            "chance": 0.02,
+            "palette": [{"block": "minecraft:kelp_plant"}],
+            "stackMin": 2,
+            "stackMax": 6,
+            "partOf": "SEA_FLOOR"
+        },
+        {
+            "chance": 0.2,
+            "palette": [{"block": "minecraft:seagrass"}]
+        },
+        {
+            "chance": 0.2,
+            "palette": [{
+                "block": "minecraft:tall_seagrass",
+                "data": {"half": "lower"}
+            }],
+            "topPalette": [{
+                "block": "minecraft:tall_seagrass",
+                "data": {"half": "upper"}
+            }],
+            "partOf": "SEA_FLOOR"
+        }
+    ],
+    "loot": {
+        "mode": "ADD",
+        "multiplier": 1,
+        "tables": ["tropical-dungeon"]
     }
-    ]
 }

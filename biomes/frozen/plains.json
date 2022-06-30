@@ -1,15 +1,9 @@
 {
     "name": "Frozen Plains",
-    "derivative": "SNOWY_TAIGA",
     "color": "#105D7F",
     "rarity": 1,
+    "derivative": "SNOWY_TAIGA",
     "vanillaDerivative": "SNOWY_TAIGA",
-    "children": ["frozen/hills"],
-    "generators": [{
-        "min": 6,
-        "max": 11,
-        "generator": "plain"
-    }],
     "customDerivitives": [{
         "category": "icy",
         "id": "frozen_plains",
@@ -21,6 +15,16 @@
         "foliageColor": "#B8D0E1",
         "grassColor": "#D0E1FF"
     }],
+    "children": ["frozen/hills"],
+    "generators": [{
+        "min": 6,
+        "max": 11,
+        "generator": "plain"
+    }],
+    "wall": {"palette": [
+        {"block": "minecraft:stone"},
+        {"block": "minecraft:andesite"}
+    ]},
     "layers": [
         {
             "minHeight": 0,
@@ -62,20 +66,6 @@
             "structure": "village-snowy"
         }
     ],
-    "decorators": [{
-        "chance": 1,
-        "variance": {
-            "style": "IRIS",
-            "zoom": 0.5
-        },
-        "palette": [
-            {
-                "data": {"layers": 1},
-                "block": "minecraft:snow"
-            },
-            {"block": "minecraft:air"}
-        ]
-    }],
     "objects": [
         {
             "chance": 2.56E-4,
@@ -233,8 +223,18 @@
             "place": ["structures/snowulder"]
         }
     ],
-    "wall": {"palette": [
-        {"block": "minecraft:stone"},
-        {"block": "minecraft:andesite"}
-    ]}
+    "decorators": [{
+        "chance": 1,
+        "variance": {
+            "style": "NOWHERE",
+            "zoom": 0.5
+        },
+        "palette": [
+            {
+                "data": {"layers": 1},
+                "block": "minecraft:snow"
+            },
+            {"block": "minecraft:air"}
+        ]
+    }]
 }

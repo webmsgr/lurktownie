@@ -1,14 +1,14 @@
 {
     "name": "Mesa Plateau Dirt high",
-    "rarity": 1,
     "color": "#C65726",
+    "rarity": 1,
     "derivative": "BADLANDS",
     "vanillaDerivative": "BADLANDS",
     "biomeScatter": ["BADLANDS"],
     "generators": [
         {
-            "min": 55,
-            "max": 45,
+            "min": 70,
+            "max": 110,
             "generator": "canyon-steep"
         },
         {
@@ -22,11 +22,12 @@
             "generator": "cracked-cliffs"
         }
     ],
+    "biomeStyle": {"style": "SIMPLEX"},
     "layers": [
         {
             "minHeight": 5,
             "maxHeight": 5,
-            "style": {"style": "IRIS"},
+            "style": {"style": "NOWHERE"},
             "zoom": 0.7,
             "palette": [
                 {"block": "minecraft:grass_block"},
@@ -66,12 +67,6 @@
             "palette": [{"block": "minecraft:brown_terracotta"}]
         }
     ],
-    "lockLayers": true,
-    "decorators": [{
-        "chance": 0.05,
-        "palette": [{"block": "minecraft:tall_grass"}]
-    }],
-    "biomeStyle": {"style": "SIMPLEX"},
     "objects": [
         {
             "place": [
@@ -106,5 +101,10 @@
                 }]}
             }]
         }
-    ]
+    ],
+    "decorators": [{
+        "chance": 0.05,
+        "palette": [{"block": "minecraft:tall_grass"}]
+    }],
+    "lockLayers": true
 }

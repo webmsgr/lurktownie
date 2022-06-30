@@ -1,13 +1,13 @@
 {
     "name": "Hot Desert Dunes Red",
-    "rarity": 1,
     "color": "#DBD155",
+    "rarity": 1,
     "derivative": "DESERT",
     "vanillaDerivative": "DESERT",
     "generators": [{
         "generator": "smooth-dunes",
-        "max": 23,
-        "min": 10
+        "max": 35,
+        "min": 30
     }],
     "layers": [
         {
@@ -55,7 +55,7 @@
         },
         {
             "chance": 0.0018,
-            "mode": "MIN_HEIGHT",
+            "mode": "PAINT",
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -77,8 +77,25 @@
             }
         },
         {
+            "mode": "PAINT",
+            "place": [
+                "structures/ruins-desert-1",
+                "structures/ruins-desert-2"
+            ],
+            "chance": 0.005,
+            "rotation": {
+                "enabled": true,
+                "yAxis": {
+                    "enabled": true,
+                    "interval": 90,
+                    "min": -360,
+                    "max": 360
+                }
+            }
+        },
+        {
             "chance": 0.0014,
-            "mode": "FAST_MIN_HEIGHT",
+            "mode": "PAINT",
             "rotation": {
                 "yAxis": {
                     "min": 0,
@@ -107,7 +124,7 @@
             "stackMax": 5,
             "style": {"style": "STATIC"},
             "palette": [{"block": "minecraft:cactus"}],
-            "heightVariance": {"style": "IRIS"},
+            "heightVariance": {"style": "NOWHERE"},
             "stackMin": 1
         },
         {
