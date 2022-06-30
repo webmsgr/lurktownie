@@ -8,9 +8,9 @@
         "style": "NOWHERE_CELLULAR",
         "zoom": 5
     },
-    "logicalHeight": 512,
+    "logicalHeight": 320,
     "dimensionHeight": {
-        "max": 512,
+        "max": 320,
         "min": 0
     },
     "landChance": 0.69,
