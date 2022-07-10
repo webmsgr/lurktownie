@@ -40,7 +40,11 @@
   "decorators": [
     {
       "chance": 0.005,
-      "palette": [{ "block": "minecraft:dead_bush" }]
+      "palette": [
+        {
+          "block": "minecraft:dead_bush"
+        }
+      ]
     }
   ]
 }

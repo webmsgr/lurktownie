@@ -11,14 +11,14 @@
       "min": 30
     },
     {
-        "generator": "mountain",
-        "max": 20,
-        "min": 0
+      "generator": "mountain",
+      "max": 20,
+      "min": 0
     },
     {
-        "generator": "rare-hills",
-        "max": 20,
-        "min": 0
+      "generator": "rare-hills",
+      "max": 20,
+      "min": 0
     }
   ],
   "customDerivitives": [
@@ -38,12 +38,23 @@
     {
       "minHeight": 3,
       "maxHeight": 10,
-      "style": { "style": "FRACTAL_SMOKE", "zoom": 0.05 },
+      "style": {
+        "style": "FRACTAL_SMOKE",
+        "zoom": 0.05
+      },
       "palette": [
-        { "block": "minecraft:orange_terracotta" },
-        { "block": "minecraft:red_sand" },
-        { "block": "minecraft:sandstone" },
-        { "block": "minecraft:sand" }
+        {
+          "block": "minecraft:orange_terracotta"
+        },
+        {
+          "block": "minecraft:red_sand"
+        },
+        {
+          "block": "minecraft:sandstone"
+        },
+        {
+          "block": "minecraft:sand"
+        }
       ]
     },
     {
@@ -63,7 +74,11 @@
         "minimumSlope": 4.5,
         "maximumSlope": 20
       },
-      "palette": [{ "block": "minecraft:sandstone" }]
+      "palette": [
+        {
+          "block": "minecraft:sandstone"
+        }
+      ]
     },
     {
       "minHeight": 5,
@@ -117,7 +132,10 @@
     },
     {
       "mode": "MIN_HEIGHT",
-      "place": ["structures/ruins-desert-1", "structures/ruins-desert-2"],
+      "place": [
+        "structures/ruins-desert-1",
+        "structures/ruins-desert-2"
+      ],
       "chance": 0.005,
       "rotation": {
         "enabled": true,
@@ -141,7 +159,10 @@
         },
         "enabled": true
       },
-      "place": ["clutter/rsphinx1", "clutter/rbrksphinx1"],
+      "place": [
+        "clutter/rsphinx1",
+        "clutter/rbrksphinx1"
+      ],
       "translate": {
         "x": 0,
         "y": -2,
@@ -153,16 +174,30 @@
     {
       "verticalZoom": 5,
       "chance": 0.004,
-      "variance": { "style": "STATIC" },
+      "variance": {
+        "style": "STATIC"
+      },
       "stackMax": 5,
-      "style": { "style": "STATIC" },
-      "palette": [{ "block": "minecraft:cactus" }],
-      "heightVariance": { "style": "STATIC" },
+      "style": {
+        "style": "STATIC"
+      },
+      "palette": [
+        {
+          "block": "minecraft:cactus"
+        }
+      ],
+      "heightVariance": {
+        "style": "STATIC"
+      },
       "stackMin": 1
     },
     {
       "chance": 0.005,
-      "palette": [{ "block": "minecraft:dead_bush" }]
+      "palette": [
+        {
+          "block": "minecraft:dead_bush"
+        }
+      ]
     }
   ]
 }
