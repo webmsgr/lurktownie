@@ -5,9 +5,7 @@
       "innerConnector": false,
       "rotateConnector": false,
       "name": "minecraft:bottom",
-      "pools": [
-        "village/common/cats"
-      ],
+      "pools": ["village/common/cats"],
       "position": {
         "x": -5,
         "y": -3,
@@ -33,9 +31,7 @@
       "innerConnector": false,
       "rotateConnector": false,
       "name": "minecraft:bottom",
-      "pools": [
-        "village/common/iron_golem"
-      ],
+      "pools": ["village/common/iron_golem"],
       "position": {
         "x": -5,
         "y": -3,
@@ -61,9 +57,7 @@
       "innerConnector": false,
       "rotateConnector": false,
       "name": "minecraft:bottom",
-      "pools": [
-        "village/common/cats"
-      ],
+      "pools": ["village/common/cats"],
       "position": {
         "x": 4,
         "y": -3,
@@ -89,9 +83,7 @@
       "innerConnector": false,
       "rotateConnector": false,
       "name": "minecraft:street",
-      "pools": [
-        "village/desert/streets"
-      ],
+      "pools": ["village/desert/streets"],
       "position": {
         "x": -6,
         "y": -2,
@@ -104,9 +96,7 @@
       "innerConnector": false,
       "rotateConnector": false,
       "name": "minecraft:street",
-      "pools": [
-        "village/desert/streets"
-      ],
+      "pools": ["village/desert/streets"],
       "position": {
         "x": -1,
         "y": -2,
@@ -119,9 +109,7 @@
       "innerConnector": false,
       "rotateConnector": false,
       "name": "minecraft:street",
-      "pools": [
-        "village/desert/streets"
-      ],
+      "pools": ["village/desert/streets"],
       "position": {
         "x": 0,
         "y": -2,
@@ -134,9 +122,7 @@
       "innerConnector": false,
       "rotateConnector": false,
       "name": "minecraft:street",
-      "pools": [
-        "village/desert/streets"
-      ],
+      "pools": ["village/desert/streets"],
       "position": {
         "x": 5,
         "y": -2,

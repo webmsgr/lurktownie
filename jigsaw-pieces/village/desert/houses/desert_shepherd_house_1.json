@@ -5,9 +5,7 @@
       "innerConnector": false,
       "rotateConnector": false,
       "name": "minecraft:bottom",
-      "pools": [
-        "village/common/sheep"
-      ],
+      "pools": ["village/common/sheep"],
       "position": {
         "x": -2,
         "y": -3,

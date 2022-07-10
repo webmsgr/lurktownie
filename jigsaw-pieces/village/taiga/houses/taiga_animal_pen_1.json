@@ -5,9 +5,7 @@
       "innerConnector": false,
       "rotateConnector": false,
       "name": "minecraft:bottom",
-      "pools": [
-        "village/common/animals"
-      ],
+      "pools": ["village/common/animals"],
       "position": {
         "x": 0,
         "y": -2,
@@ -33,9 +31,7 @@
       "innerConnector": false,
       "rotateConnector": false,
       "name": "minecraft:bottom",
-      "pools": [
-        "village/common/animals"
-      ],
+      "pools": ["village/common/animals"],
       "position": {
         "x": 2,
         "y": -2,

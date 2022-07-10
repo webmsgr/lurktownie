@@ -5,9 +5,7 @@
       "innerConnector": false,
       "rotateConnector": false,
       "name": "minecraft:bottom",
-      "pools": [
-        "village/plains/decor"
-      ],
+      "pools": ["village/plains/decor"],
       "position": {
         "x": -3,
         "y": -3,

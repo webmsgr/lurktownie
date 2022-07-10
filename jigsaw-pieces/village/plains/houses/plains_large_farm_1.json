@@ -5,9 +5,7 @@
       "innerConnector": true,
       "rotateConnector": false,
       "name": "minecraft:building_entrance",
-      "pools": [
-        "village/plains/streets"
-      ],
+      "pools": ["village/plains/streets"],
       "position": {
         "x": -6,
         "y": -3,
